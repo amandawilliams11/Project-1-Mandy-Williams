@@ -32,7 +32,7 @@ function draw() {
  	updatedBackground();
  }
 
- if(millis()>9000 && millis()<20000){
+ if(millis()>9000 && millis()<50000){
  	blink();
  }
 
@@ -111,7 +111,7 @@ function puppers2(){//the last three puppy clones
 }
 
 function updatedBackground(){ //creates white border for puppy
-	fill(255);
+	fill(255,182,193);
 	rect(30,20,755,155);
 	rect(30,500,755,155);
 
@@ -135,14 +135,14 @@ function blush(){ //adds blush
 function blink(){
 	if(mouseIsPressed == true){
 
-		stroke(0)
+		stroke(0)//closed eyes
 		ellipse(235,310,70,80);
         ellipse(160,310,70,80);
 
 		fill(200,158,106);
 		ellipse(235,318,70,65);
         ellipse(160,318,70,65);
-	} else {
+	} else { //og eyes
 		fill(255);
 		ellipse(235,310,70,80);
         ellipse(160,310,70,80);
